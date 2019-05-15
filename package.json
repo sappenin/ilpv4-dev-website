@@ -1,0 +1,22 @@
+{
+  "name": "ilpv4-dot-dev-website",
+  "version": "0.0.1",
+  "description": "Ilpv4.dev website",
+  "license": "MIT",
+  "scripts": {
+    "docz:dev": "docz dev",
+    "docz:build": "docz build",
+    "dev": "docz dev",
+    "build": "docz build"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.2.0"
+  },
+  "devDependencies": {
+    "docz": "^1.2.0",
+    "docz-theme-default": "^1.2.0"
+  }
+}
