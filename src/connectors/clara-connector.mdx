@@ -222,40 +222,6 @@ Clara peers with [Marty](marty-connector) using [Ilp-over-Http](https://github.c
 <path d="M 464.878906 13.319336 L 464.878906 7.335938 L 461.892578 7.335938 L 461.892578 6.412109 L 465.738281 6.412109 L 465.738281 13.319336 Z " fill="rgb(0, 0, 0)" fill-opacity="1.000000" />
 </svg>
 
-### Marty Peer Account Configuration
-This account is configured to have the following configuration:
-
-```json
-{
-  "__description": "Marty's wallet account on clara",
-  "asset_code": "USD",
-  "asset_scale": 2,
-  "http_endpoint": "http://localhost:9000/ilp",
-  "http_incoming_authorization": "Bearer marty_wallet",
-  "http_outgoing_authorization": "Basic marty_wallet",
-  "ilp_address": "test.rust.laptop.marty_wallet",
-  "is_admin": false,
-  "max_packet_amount": 18446744073709551615,
-  "min_balance": -1000000000000,
-  "receive_routes": false,
-  "round_trip_time": 500,
-  "routing_relation": "Child",
-  "send_routes": false,
-  "settle_threshold": null,
-  "settle_to": null,
-  "xrp_address": null
-}
-```
-
-### View Marty Account Details
-To view the details of this account, execute the following curl command:
-```
-curl -X GET \
-  https://clara-dot-ilpv4-dev.appspot.com/accounts/1 \
-  -H 'Accept: application/json' \
-  -H 'Authorization: Bearer password'
-```
-
 ## Peer with Clara
 You can peer with Clara via the following:
 

@@ -231,8 +231,8 @@ This account is configured to have the following configuration:
   "asset_code": "USD",
   "asset_scale": 2,
   "http_endpoint": "http://localhost:9000/ilp",
-  "http_incoming_authorization": "Bearer marty_wallet",
-  "http_outgoing_authorization": "Basic marty_wallet",
+  "http_incoming_authorization": "Bearer {secret}",
+  "http_outgoing_authorization": "Basic {secret}",
   "ilp_address": "test.rust.laptop.marty_wallet",
   "is_admin": false,
   "max_packet_amount": 18446744073709551615,
@@ -247,24 +247,13 @@ This account is configured to have the following configuration:
 }
 ```
 
-### View Marty Account Details
-To view the details of this account, execute the following curl command:
-```
-curl -X GET \
-  https://emmett-dot-ilpv4-dev.appspot.com/accounts/1 \
-  -H 'Accept: application/json' \
-  -H 'Authorization: Bearer password'
-```
-
 ## Peer with Emmett
 You can peer with Emmett via the following:
 
-1. Do this.
-1. Do that.
+1. TODO.
 
 ## Payments through Emmett
 You can make Interledger payments that transits _through_ Emmett by using an SPSP sender account on __Emmett__. Execute
 the following commands to see it in action:
 
-1. to make a payment
-1. to a destination address on `test.ilpv4-dev.clara`.
+1. TODO.
