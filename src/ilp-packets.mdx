@@ -1,0 +1,60 @@
+---
+name: ILP Packet Serializer
+sidebar: true
+route: /ilp-packets.html
+---
+
+# Interledger Packets
+ILP uses an [OER-encoded](https://github.com/interledger/rfcs/blob/master/0030-notes-on-oer-encoding/0030-notes-on-oer-encoding.md)
+ binary packet framework to ensure the most compact representation of money while in transit.
+
+There are three types of packet: `prepare`, `fulfill`, and `reject`.
+
+You can discover the details of each one in the ILPv4 RFC under [Packet Format](https://github.com/interledger/rfcs/blob/master/0027-interledger-protocol-4/0027-interledger-protocol-4.md#packet-format), but this page details concrete representations of each.
+
+## Prepare Packet
+
+This is an actual binary `Prepare` packet, hex-encoded:
+
+```
+0C430000000000000001323032303035313631343137353232303566687AADF862BD776C8FC18B8E9F8E20089714856EE233B3902A591D0D5F292508746573742E626F6200
+```
+
+It contains the following information:
+
+* **Packet Type**: `12`
+* **amount**: `1`
+* **expiresAt**: `2020-05-16T14:19:40.768Z`
+* **executionCondition**: `Zmh6rfhivXdsj8GLjp+OIAiXFIVu4jOzkCpZHQ1fKSU=` (ASN1.OER, Base64-encoded)
+* **destination**: `test.alice`
+* **data**: `[empty]`
+
+## Fulfill Packet
+
+This is the corresponding binary `Fulfill` packet, hex-encoded:
+
+```
+0D21000000000000000000000000000000000000000000000000000000000000000000
+```
+
+It contains the following information:
+
+* **Packet Type**: `13`
+* **fulfillment**: `AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=` (ASN1.OER, Base64-encoded)
+* **data**: `[empty]`
+
+## Reject Packet
+
+This is the corresponding binary `Reject` packet, hex-encoded:
+
+```
+0E114630320B746573742E636F6E6E69650000
+```
+
+It contains the following information:
+
+* **Packet Type**: `14`
+* **Message**: `[empty]`
+* **Error Code**: `F02 Rejeced`
+* **Triggered By**: `test.connie`
+* **data**: `[empty]`
