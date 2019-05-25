@@ -1,5 +1,5 @@
 ---
-name: Emmett Connector
+name: Emmett Connector (Rust)
 menu: Connectors
 route: /emmett-connector
 ---
@@ -9,8 +9,8 @@ Emmett is a [Tier1](https://github.com/interledger/rfcs/blob/44deb112e51db27e89b
  Connector implemented in Rust via the [interledger-rs](https://github.com/emschwartz/interledger-rs) project.
 
 ## Testnet Configuration
+  * **URL**: `https://emmett-dot-ilpv4-dev.appspot.com`
   * **ILP Address**: `test.ilpv4-dev.emmett`
-  * **Http Url**: `https://emmett-dot-ilpv4-dev.appspot.com`
 
 ## Emmett's Peers
 
@@ -227,33 +227,26 @@ This account is configured to have the following configuration:
 
 ```json
 {
-  "__description": "Marty's wallet account on emmett",
-  "asset_code": "USD",
-  "asset_scale": 2,
-  "http_endpoint": "http://localhost:9000/ilp",
-  "http_incoming_authorization": "Bearer {secret}",
-  "http_outgoing_authorization": "Basic {secret}",
-  "ilp_address": "test.rust.laptop.marty_wallet",
-  "is_admin": false,
-  "max_packet_amount": 18446744073709551615,
-  "min_balance": -1000000000000,
-  "receive_routes": false,
-  "round_trip_time": 500,
-  "routing_relation": "Child",
-  "send_routes": false,
-  "settle_threshold": null,
-  "settle_to": null,
-  "xrp_address": null
+  "__description": "Marty's peering account on Emmett",
+   "asset_code": "XRP",
+   "asset_scale": 6,
+   "btp_outgoing_token": null,
+   "btp_uri": null,
+   "http_endpoint": "https://marty-dot-ilpv4-dev.appspot.com/ilp",
+   "http_outgoing_token": "{REDACTED}",
+   "id": 0,
+   "ilp_address": "test.ilpv4-dev.emmett.marty",
+   "max_packet_amount": 18446744073709551615,
+   "min_balance": -1000000000000,
+   "packets_per_minute_limit": null,
+   "receive_routes": true,
+   "round_trip_time": 500,
+   "routing_relation": "Peer",
+   "send_routes": true,
+   "settle_threshold": null,
+   "settle_to": null
 }
 ```
 
 ## Peer with Emmett
-You can peer with Emmett via the following:
-
-1. TODO.
-
-## Payments through Emmett
-You can make Interledger payments that transits _through_ Emmett by using an SPSP sender account on __Emmett__. Execute
-the following commands to see it in action:
-
-1. TODO.
+Coming soon...

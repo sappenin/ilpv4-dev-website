@@ -1,5 +1,5 @@
 ---
-name: Clara Connector
+name: Clara Connector (Rust)
 sidebar: false
 menu: Connectors
 route: /clara-connector
@@ -223,15 +223,31 @@ Clara peers with [Marty](marty-connector) using [Ilp-over-Http](https://github.c
 <path d="M 464.878906 13.319336 L 464.878906 7.335938 L 461.892578 7.335938 L 461.892578 6.412109 L 465.738281 6.412109 L 465.738281 13.319336 Z " fill="rgb(0, 0, 0)" fill-opacity="1.000000" />
 </svg>
 
+### Marty Peer Account Configuration
+This account is configured to have the following configuration:
+
+```json
+{
+  "__description": "Marty's peering account on Clara",
+   "asset_code": "XRP",
+   "asset_scale": 6,
+   "btp_outgoing_token": null,
+   "btp_uri": null,
+   "http_endpoint": "https://marty-dot-ilpv4-dev.appspot.com/ilp",
+   "http_outgoing_token": "{REDACTED}",
+   "id": 0,
+   "ilp_address": "test.ilpv4-dev.clara.marty",
+   "max_packet_amount": 18446744073709551615,
+   "min_balance": -1000000000000,
+   "packets_per_minute_limit": null,
+   "receive_routes": true,
+   "round_trip_time": 500,
+   "routing_relation": "Peer",
+   "send_routes": true,
+   "settle_threshold": null,
+   "settle_to": null
+}
+```
+
 ## Peer with Clara
-You can peer with Clara via the following:
-
-1. Do this.
-1. Do that.
-
-## Payments through Clara
-You can make Interledger payments that transits _through_ Clara by using an SPSP sender account on __Clara__. Execute
-the following commands to see it in action:
-
-1. to make a payment
-1. to a destination address on `test.ilpv4-dev.clara`.
+Coming soon...
