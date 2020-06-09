@@ -1,0 +1,14 @@
+{
+    "subject" : "payid:example$ilpv4.dev",
+    "links" :
+    [
+        {
+          "rel": "https://payid.org/ns/payid-uri-template/1.0",
+          "template": "https://ilpv4.dev/users/example"
+        },
+        {
+           "rel": "https://openpayments.dev/ns/open-payments-path/1.0",
+           "template": "https://xpring.money/open-payments/"
+        }
+    ]
+}
