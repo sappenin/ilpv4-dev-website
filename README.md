@@ -66,6 +66,8 @@ We are hosting the site on github pages via the deploy script below.
 ```
 # In the root folder:
 ./deploy.sh
+
+(note: move the `.well-known` folder into the root before deploying)
 ```
 
 ## Structure
